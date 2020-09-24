@@ -1,0 +1,186 @@
+/* Global Styles Start */
+
+/* Tag Styles Start */
+:root {
+  /* The :root selector sets our default custom styles. 
+This selector's styles affect the whole document (and every element.) */
+  /* Like other languages, CSS has variables to store data that can be called throughout our 
+stylesheet in a easier to remember way. */
+  --neph: #27ae60;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* The asterisk(*) is a universal selector. In this insance it selects all elements in our document. */
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  font-family: sans-serif;
+  /* The line-height property controls the vertical 
+  spacing between lines of text. It does not necessary 
+  require a measurement, as in this instance, our value tells the browser that the line-height is 1.5 times the element's font-size. */
+
+  line-height: 1.5;
+}
+h2 {
+  font-size: 2.05rem;
+  margin-bottom: 1rem;
+}
+/*An list (whether ordered or unordered) is required when the <nav> element is used. These are only valid children.*/
+
+nav > ul {
+  list-style: none;
+  padding: 0;
+}
+/* Tag Styles End */
+
+/* Class styles Start */
+.site-width {
+  max-width: 1200px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* Class styles End */
+
+/* Global styles End */
+
+/* Site styles Start */
+
+/* Nav bar Start */
+.navbar {
+  height: 10vh;
+}
+
+.navbar__wrapper {
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar__logo {
+  height: 90%;
+}
+.navbar__logo > img {
+  height: inherit;
+  display: block;
+}
+.menu {
+  display: flex;
+}
+.menu__item {
+  padding-left: 20px;
+}
+
+.menu__link {
+  /*  The color property changes the color of an element's text. 
+  There default color values that can be used, like black in this example and others like white, 
+  yellow, green, etc.*/
+  /* The color property also accepts hex values, basically a series of six letters and numbers preceded by hashtag.  */
+  /* The color property also accepts rgb (red, green, blue) values. */
+  /* Alpha controlling opacity through value 0 through 1. */
+
+  color: black;
+
+  /* The text-decoration property controls the default appearance of an anchor tag. */
+
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.menu__link:hover {
+  /* The :hover pseudo-class, allows us to control the appearance and behaviour of a link 
+  when a user hovers over it. */
+  color: #27ae60;
+}
+/* .banner,
+.section {
+  min-height: 100vh;
+} */
+.banner {
+  /* min-height: 100vh; */
+  min-height: 800px;
+  /* The calc function allows to calculate known and 
+  unknown values by using the browser engine. 
+  Basically, we are able to utilize math without 
+  exact numbers. */
+
+  min-height: calc(100vh - 100px);
+  background-image: url("https://images.unsplash.com/photo-1600319213199-25e1503dbb7c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+  /* This changes the default repeat behavior of a property */
+  background-repeat: no-repeat;
+  /* The background size value contain tells the background-image to fit the container proportionally to its size */
+  background-size: contain;
+  background-size: cover;
+  background-position: center;
+  background: #000000;
+  background: url("https://images.unsplash.com/photo-1600319213199-25e1503dbb7c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80")
+    no-repeat center;
+  background-size: cover;
+  color: #fff;
+}
+.banner__wrapper {
+  text-align: center;
+  background: rgb(0, 0, 0, 0.5);
+  min-height: inherit;
+  display: flex;
+  align-items: center;
+}
+/* .banner-content {
+  height: 24px;
+  outline: 1px solid green;
+} */
+.banner_heading {
+  font-size: 4rem;
+}
+.banner_tagline {
+  font-size: 2rem;
+}
+.section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  min-height: 50vh;
+
+  display: flex;
+  /* The default direction of display: flex is horizontally or in a row, however, we change that behaviour to 
+  vertically when the value is column. When the flex-direction of an element is changed, so is the default behaviour of align-items. 
+  The default behaviour being vertically or top to bottom, but when the flex-direction is changed to column it works horizontally left to right. */
+
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+/* section 2 styles Start */
+#section-2 {
+  background: var(--neph);
+  color: white;
+}
+/* section 2 styles End */
+/* Nav bar End */
+
+/* Site styles End */
+/* Footer Start*/
+.footer {
+  /* To call CSS Custom Variable, we write the following var, open parenthisis [(], 
+  variable name, close parenthisis [)]. */
+  /* To create a CSS Custom Variable, we write two dashes (--) followed by the variable name. */
+
+  background-color: var(--neph);
+  /* If the 6 hex characters are all the same we can use 3 as an abbreviation */
+  color: #fff;
+  padding: 40px 0px;
+  text-align: center;
+}
+/*Footer End */
+
+/* 
+  Make our text clear.
+  Fix image repeating.
+  Center vertically and horizontally.
+  */
